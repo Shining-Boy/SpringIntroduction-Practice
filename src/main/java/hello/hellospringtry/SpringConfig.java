@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import hello.hellospringtry.repository.JdbcMemberRepository;
+import hello.hellospringtry.repository.JdbcTemplateMemberRepository;
 import hello.hellospringtry.repository.MemberRepository;
 import hello.hellospringtry.repository.MemoryMemberRepository;
 import hello.hellospringtry.service.MemberService;
@@ -27,6 +28,7 @@ public class SpringConfig {
     @Bean
     MemberRepository memberRepository() {
         //return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
