@@ -2,10 +2,13 @@ package hello.hellospringtry.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import hello.hellospringtry.domain.Member;
 import hello.hellospringtry.repository.MemberRepository;
 import hello.hellospringtry.repository.MemoryMemberRepository;
 
+@Transactional
 public class MemberService {
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final MemberRepository memberRepository;
